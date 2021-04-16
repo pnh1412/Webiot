@@ -1,3 +1,16 @@
+<?php
+   $host        = "host = ec2-52-87-107-83.compute-1.amazonaws.com";
+   $port        = "port = 5432";
+   $dbname      = "dbname = d80c7bbtm2g608";
+   $credentials = "user = mxelwnzsgluzzh password=f2a7de6ce35958e9465c62795377f6eddb9ff1575712962eab96e3155f4b8bec";
+
+   $db = pg_connect( "$host $port $dbname $credentials"  );
+   if(!$db) {
+      echo "Error : Unable to open database\n";
+   } else {
+      echo "Opened database successfully\n";
+   }
+?>
 <!DOCTYPE html>
 <html>
 <head>
